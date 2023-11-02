@@ -1,0 +1,17 @@
+{
+  "name": "bix_apply",
+  "version": "1.0.0",
+  "description": "automatically apply to internships in your sleep",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joshmayer.net",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^21.4.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-recaptcha": "^3.6.8",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
