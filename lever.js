@@ -19,15 +19,16 @@ puppeteer.use(
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     args: [
       "--disable-features=IsolateOrigins,site-per-process,SitePerProcess",
       "--flag-switches-begin --disable-site-isolation-trials --flag-switches-end",
     ],
   });
   const page = await browser.newPage();
+  //   await page.goto("https://arh.antoinevastel.com/bots/areyouheadless");
   await page.goto(
-    "https://jobs.lever.co/artera/82c93c81-1d5d-4490-9dbc-4c68af88e34f/apply"
+    "https://jobs.lever.co/schoolhouseworld/8b89f4c4-ab6b-440c-9f43-4df6a7ea5982/apply"
   );
 
   await page.waitForSelector('input[name="name"]', { timeout: 5000 });
@@ -57,13 +58,18 @@ puppeteer.use(
   });
   await page.type('input[name="urls[Portfolio]"]', user.portfolio_url);
 
-  await page.waitForSelector(
-    'input[type="radio"][name="cards[d74bd0d4-ef9f-476c-9ad8-081d540f476a][field0]"][value="Yes"]'
-  );
+  try {
+    await page.waitForSelector(
+      'input[type="radio"][name="cards[d74bd0d4-ef9f-476c-9ad8-081d540f476a][field0]"][value="Yes"]',
+      { timeout: 500 }
+    );
 
-  await page.click(
-    'input[type="radio"][name="cards[d74bd0d4-ef9f-476c-9ad8-081d540f476a][field0]"][value="Yes"]'
-  );
+    await page.click(
+      'input[type="radio"][name="cards[d74bd0d4-ef9f-476c-9ad8-081d540f476a][field0]"][value="Yes"]'
+    );
+  } catch (error) {
+    console.log("bypass");
+  }
 
   // await page.waitForSelector('textarea[name="comments"]');
 
@@ -102,23 +108,27 @@ puppeteer.use(
 
   console.log(solved);
 
-  console.log("solved");
+  console.log("solved captchs");
 
-  await Promise.all([
-    page.waitForNavigation(),
-    console.log("ass"),
-    // page.screenshot({ path: "aftercapp.png", fullPage: true }),
-    // page.click(`#hcaptchaSubmitBtn`),
-  ]);
+  //   await Promise.all([
+  //     page.waitForNavigation(),
+  //     console.log("complete!"),
+  //     // page.screenshot({ path: "aftercapp.png", fullPage: true }),
+  //     // page.click(`#hcaptchaSubmitBtn`),
+  //   ]);
 
-  console.log("submited");
+  await page.waitForTimeout(2000);
 
-  await page.click("#btn-submit");
+  //   await page.click(".button-submit");
 
-  await page.waitForTimeout(1000);
+  //   console.log("clicking button...");
 
-  await page.screenshot({ path: "lever.png", fullPage: true });
-  await page.click("#btn-submit");
+  //   await page.click("#btn-submit");
 
-  await browser.close();
+  //   await page.waitForTimeout(1000);
+
+  await page.screenshot({ path: "leverdoneenew.png", fullPage: true });
+  //   await page.click("#btn-submit");
+
+  //   await browser.close();
 })();
