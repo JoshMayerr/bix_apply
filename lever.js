@@ -28,107 +28,113 @@ puppeteer.use(
   const page = await browser.newPage();
   //   await page.goto("https://arh.antoinevastel.com/bots/areyouheadless");
   await page.goto(
-    "https://jobs.lever.co/schoolhouseworld/8b89f4c4-ab6b-440c-9f43-4df6a7ea5982/apply"
+    "https://jobs.lever.co/tri/e602a5e6-a400-412b-96cf-c5c82a9adb33/apply"
   );
 
-  await page.waitForSelector('input[name="name"]', { timeout: 5000 });
-  await page.type('input[name="name"]', `${user.first_name} ${user.last_name}`);
+  await page.waitForSelector("#application-form");
 
-  const attachButton = await page.$('input[name="resume"]');
-  await attachButton.click();
-
-  const [fileChooser] = await Promise.all([
-    page.waitForFileChooser(),
-    attachButton.click(),
-  ]);
-
-  await fileChooser.accept(["./josh_mayer_815.pdf"]);
-
-  await page.waitForSelector('input[name="email"]', { timeout: 5000 });
-  await page.type('input[name="email"]', user.email);
-
-  await page.waitForSelector('input[name="phone"]', { timeout: 5000 });
-  await page.type('input[name="phone"]', user.phone);
-
-  await page.waitForSelector('input[name="urls[LinkedIn]"]', { timeout: 5000 });
-  await page.type('input[name="urls[LinkedIn]"]', user.linkedin_url);
-
-  await page.waitForSelector('input[name="urls[Portfolio]"]', {
-    timeout: 5000,
-  });
-  await page.type('input[name="urls[Portfolio]"]', user.portfolio_url);
+  //   --- fill in section 1 ----
 
   try {
-    await page.waitForSelector(
-      'input[type="radio"][name="cards[d74bd0d4-ef9f-476c-9ad8-081d540f476a][field0]"][value="Yes"]',
-      { timeout: 500 }
-    );
+    const attachButton = await page.$('input[name="resume"]');
+    await attachButton.click();
 
-    await page.click(
-      'input[type="radio"][name="cards[d74bd0d4-ef9f-476c-9ad8-081d540f476a][field0]"][value="Yes"]'
-    );
+    const [fileChooser] = await Promise.all([
+      page.waitForFileChooser(),
+      attachButton.click(),
+    ]);
+
+    await fileChooser.accept(["./josh_mayer_815.pdf"]);
   } catch (error) {
-    console.log("bypass");
+    console.log("resume not work");
   }
 
-  // await page.waitForSelector('textarea[name="comments"]');
+  try {
+    await page.type(
+      'input[name="name"]',
+      `${user.first_name} ${user.last_name}`
+    );
+  } catch (error) {}
+
+  try {
+    await page.type('input[name="email"]', user.email);
+  } catch (error) {}
+
+  try {
+    await page.type('input[name="phone"]', user.phone);
+  } catch (error) {}
+
+  //  -------- fill in section 2 --------
+
+  try {
+    await page.type('input[name="urls[LinkedIn]"]', user.linkedin_url);
+  } catch (error) {}
+
+  try {
+    await page.type('input[name="urls[Portfolio]"]', user.portfolio_url);
+  } catch (error) {}
+
+  try {
+    await page.type('input[name="urls[GitHub]"]', user.github_url);
+  } catch (error) {}
+
+  try {
+    await page.type('input[name="urls[Twiter]"]', user.twitter_url);
+  } catch (error) {}
+
+  //   section 3 the hard part ------------
+
+  const customQuestions = await page.$$(
+    ".application-question.custom-question"
+  );
+
+  for (let i = 0; i < customQuestions.length; i++) {
+    const question = customQuestions[i];
+    const radioInputs = await question.$$('input[type="radio"]');
+    const textInput = await question.$('input[type="text"], textarea');
+
+    if (radioInputs.length > 0) {
+      // Select a radio button (assuming you want to select the first option)
+      await radioInputs[0].click();
+    }
+    if (textInput) {
+      // Fill in the text input field (you can replace 'Your answer' with your desired text)
+      await textInput.type("Your answer");
+    }
+  }
+
+  // --------- section 4 cover letter ---------
 
   await page.type(
     'textarea[name="comments"]',
     "submitted using a bot (bix.sh) hehe"
   );
 
-  await page.click("#btn-submit");
+  //   --- section 5 demographics (opttion so not done) -----
 
-  console.log("clicked submit");
-
-  await page.waitForTimeout(1000);
-
-  console.log("waiting for captcha");
-
-  //   await page.waitForSelector('iframe[src*="recaptcha/"]');
-  //   console.log(page.mainFrame().childFrames()[1]);
-  //   for (const frame of page.mainFrame().childFrames()) {
-  //     // Attempt to solve any potential captchas in those frames
-  //     console.log("iter");
-  //     const { captchas, filtered, solutions, solved, error } =
-  //       await frame.solveRecaptchas();
-
-  //     console.log(captchas, "c");
-
-  //     console.log(solved);
-  //   }
-
-  const frame = page.mainFrame().childFrames()[1];
-
-  const { captchas, filtered, solutions, solved, error } =
-    await frame.solveRecaptchas();
-
-  console.log(captchas, "c");
-
-  console.log(solved);
-
-  console.log("solved captchs");
-
-  //   await Promise.all([
-  //     page.waitForNavigation(),
-  //     console.log("complete!"),
-  //     // page.screenshot({ path: "aftercapp.png", fullPage: true }),
-  //     // page.click(`#hcaptchaSubmitBtn`),
-  //   ]);
-
-  await page.waitForTimeout(2000);
-
-  //   await page.click(".button-submit");
-
-  //   console.log("clicking button...");
+  //   ---- submit!!! + bypass hcaptcha ----
 
   //   await page.click("#btn-submit");
+
+  //   console.log("clicked submit");
 
   //   await page.waitForTimeout(1000);
 
-  await page.screenshot({ path: "leverdoneenew.png", fullPage: true });
-  //   await page.click("#btn-submit");
+  //   console.log("waiting for captcha");
 
+  //   const frame = page.mainFrame().childFrames()[1];
+
+  //   const { captchas, filtered, solutions, solved, error } =
+  //     await frame.solveRecaptchas();
+
+  //   console.log(captchas, "c");
+
+  //   console.log(solved);
+
+  //   console.log("solved captchs");
+
+  //   await page.waitForTimeout(2000);
+
+  //   await page.screenshot({ path: "leverdoneenew.png", fullPage: true });
   //   await browser.close();
 })();
