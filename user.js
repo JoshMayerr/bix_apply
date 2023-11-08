@@ -12,6 +12,8 @@ const user = {
   end_year: "2026",
   linkedin_url: "https://linkedin.com/in/jooshmayer",
   portfolio_url: "https://joshmayer.net",
+  twitter_url: "https://twitter.com/jooshmayer",
+  github_url: "https://github.com/joshmayerr",
   ethnicity: "white",
   veteran: "No",
   disability: "No",
@@ -19,4 +21,4 @@ const user = {
   authorized: "Yes",
 };
 
-module.exports = user;
+export default user;

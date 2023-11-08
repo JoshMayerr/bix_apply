@@ -1,0 +1,966 @@
+<form id="application-form" enctype="multipart/form-data" method="POST">
+  <div class="section page-centered application-form">
+    <div><span></span></div>
+    <h4>Submit your application</h4>
+    <ul>
+      <li class="application-question resume">
+        <label
+          ><div class="application-label">
+            Resume/CV <span class="required">✱</span>
+          </div>
+          <div class="application-field">
+            <a
+              href="#"
+              class="postings-btn template-btn-utility visible-resume-upload"
+              ><svg
+                class="icon icon-paperclip"
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5 5V9C5 10.7 6.3 12 8 12C9.7 12 11 10.7 11 9V4.5C11 2 9 0 6.5 0C4 0 2 2 2 4.5V10C2 13.3 4.7 16 8 16C11.3 16 14 13.3 14 10V4H12V10C12 12.2 10.2 14 8 14C5.8 14 4 12.2 4 10V4.5C4 3.1 5.1 2 6.5 2C7.9 2 9 3.1 9 4.5V9C9 9.6 8.6 10 8 10C7.4 10 7 9.6 7 9V5H5Z"
+                ></path></svg
+              ><span class="filename"></span
+              ><span class="default-label">ATTACH RESUME/CV</span
+              ><input
+                class="application-file-input invisible-resume-upload"
+                data-qa="input-resume"
+                id="resume-upload-input"
+                name="resume"
+                tabindex="-1"
+                type="file" /></a
+            ><span class="resume-upload-failure"
+              ><div class="resume-upload-label">
+                Couldn't auto-read resume.
+              </div></span
+            ><span class="resume-upload-working"
+              ><div class="loading-indicator"></div>
+              <div class="resume-upload-label">Analyzing resume...</div></span
+            ><span class="resume-upload-success"
+              ><div class="loading-indicator completed">
+                <svg
+                  class="icon icon-check"
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6.2,14.4L0,8.2l2.5-2.5l3.5,3.5c0.1,0.1,0.2,0.1,0.2,0L13.5,2L16,4.5L6.2,14.4z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="resume-upload-label">Success!</div></span
+            >
+          </div></label
+        ><span class="resume-upload-oversize"
+          ><p class="error-message">
+            File exceeds the maximum upload size of <b>100MB</b>. Please try a
+            smaller size.
+          </p></span
+        >
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">
+            Full name<span class="required">✱</span>
+          </div>
+          <div class="application-field">
+            <input type="text" name="name" required="" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <div class="application-label multiple-select">Pronouns</div>
+        <div class="application-field">
+          <ul
+            data-qa="candidatePronounsCheckboxes"
+            id="candidatePronounsCheckboxes"
+          >
+            <div class="column-wrapper">
+              <div class="table-row">
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="He/him"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >He/him</span
+                    ></label
+                  >
+                </li>
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="She/her"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >She/her</span
+                    ></label
+                  >
+                </li>
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="They/them"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >They/them</span
+                    ></label
+                  >
+                </li>
+              </div>
+              <div class="table-row">
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="Xe/xem"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >Xe/xem</span
+                    ></label
+                  >
+                </li>
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="Ze/hir"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >Ze/hir</span
+                    ></label
+                  >
+                </li>
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="Ey/em"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >Ey/em</span
+                    ></label
+                  >
+                </li>
+              </div>
+              <div class="table-row">
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="Hir/hir"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >Hir/hir</span
+                    ></label
+                  >
+                </li>
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="Fae/faer"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >Fae/faer</span
+                    ></label
+                  >
+                </li>
+                <li class="column">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pronouns"
+                      value="Hu/hu"
+                      class="standardPronounsOption"
+                    /><span class="application-answer-alternative"
+                      >Hu/hu</span
+                    ></label
+                  >
+                </li>
+              </div>
+            </div>
+            <hr />
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="pronouns"
+                  value="Use name only"
+                  id="useNameOnlyPronounsOption"
+                /><span class="application-answer-alternative"
+                  >Use name only</span
+                ></label
+              >
+            </li>
+            <hr />
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  value="Custom"
+                  id="customPronounsOption"
+                /><span class="application-answer-alternative"
+                  >Custom</span
+                ></label
+              ><input
+                class="card-field-input"
+                style="display: none"
+                id="customPronounsTextField"
+                type="text"
+                maxlength="40"
+                placeholder="Write here..."
+                name="pronouns"
+              />
+            </li>
+            <p class="description">
+              Let the employer know what pronouns you use so that they can
+              address you correctly.
+            </p>
+          </ul>
+        </div>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">
+            Email<span class="required">✱</span>
+          </div>
+          <div class="application-field">
+            <input
+              name="email"
+              type="email"
+              pattern="[a-zA-Z0-9.#$%&amp;'*+\/=?^_`{|}~][a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*"
+              required=""
+            /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Phone</div>
+          <div class="application-field"><input type="text" name="phone" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Current company</div>
+          <div class="application-field"><input type="text" name="org" /></div
+        ></label>
+      </li>
+    </ul>
+  </div>
+  <div class="section page-centered application-form">
+    <h4>Links</h4>
+    <ul>
+      <li class="application-question">
+        <label
+          ><div class="application-label">
+            LinkedIn URL<span class="required">✱</span>
+          </div>
+          <div class="application-field">
+            <input type="text" name="urls[LinkedIn]" required="" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Twitter URL</div>
+          <div class="application-field">
+            <input type="text" name="urls[Twitter]" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">GitHub URL</div>
+          <div class="application-field">
+            <input type="text" name="urls[GitHub]" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Portfolio URL</div>
+          <div class="application-field">
+            <input type="text" name="urls[Portfolio]" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Other website</div>
+          <div class="application-field">
+            <input type="text" name="urls[Other]" /></div
+        ></label>
+      </li>
+    </ul>
+  </div>
+  <div
+    class="section page-centered application-form"
+    data-qa="additional-cards"
+  >
+    <h4 data-qa="card-name">Required 1_Work Eligibility</h4>
+    <input
+      type="hidden"
+      value='{"createdAt":1500661610906,"text":"Required 1_Work Eligibility","instructions":"","type":"posting","fields":[{"type":"multiple-choice","text":"Are you eligible to work in the United States?","description":"","required":true,"id":"47f1bea3-a26e-458c-a320-d4b0d1c1e4d9","options":[{"text":"Yes","optionId":"6599a206-efa7-408a-8298-0c3ee8eeb757"},{"text":"No","optionId":"13fa07b0-5d44-4eb2-9eaa-59285aca45b5"}]}],"accountId":"b0c61671-acab-409c-8f89-4b8a9ae7cec2","id":"225cae12-81e6-4b63-ae86-bfa4cc81cf6a"}'
+      name="cards[225cae12-81e6-4b63-ae86-bfa4cc81cf6a][baseTemplate]"
+    />
+    <ul>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width multiple-choice">
+            <div class="text">
+              Are you eligible to work in the United States?<span
+                class="required"
+                >✱</span
+              >
+            </div>
+          </div>
+          <div class="application-field full-width required-field">
+            <ul data-qa="multiple-choice">
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="cards[225cae12-81e6-4b63-ae86-bfa4cc81cf6a][field0]"
+                    value="Yes"
+                    required="required"
+                  /><span class="application-answer-alternative"
+                    >Yes</span
+                  ></label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="cards[225cae12-81e6-4b63-ae86-bfa4cc81cf6a][field0]"
+                    value="No"
+                    required="required"
+                  /><span class="application-answer-alternative"
+                    >No</span
+                  ></label
+                >
+              </li>
+            </ul>
+          </div></label
+        >
+      </li>
+    </ul>
+  </div>
+  <div
+    class="section page-centered application-form"
+    data-qa="additional-cards"
+  >
+    <h4 data-qa="card-name">Required_2_Foreign National</h4>
+    <input
+      type="hidden"
+      value='{"createdAt":1491924932165,"text":"Required_2_Foreign National","instructions":"","type":"posting","fields":[{"type":"multiple-choice","text":"1. Are you a U.S. citizen, a lawful permanent resident of the United States (“green card holder”), an asylee, a refugee, or temporary resident under the 1986 legalization program?","description":"","required":true,"id":"76ba97a6-e38f-4b73-8ab9-be784cf2dc5a","options":[{"text":"Yes","optionId":"c4713754-ec60-44a1-a595-096b94c3016b"},{"text":"No","optionId":"1f802b74-4f43-485d-a188-d27f4c1c6553"}]},{"type":"multiple-choice","text":"2. Are you a national, citizen, or permanent resident of Cuba, Iran, North Korea, Sudan, Syria, or Crimea (region of Ukraine)?","description":"","required":true,"id":"a546fa00-1594-4f5a-aeac-bc33265b9326","options":[{"text":"Yes","optionId":"7f99a857-dcae-4bfd-bd85-c7f65cfd0be9"},{"text":"No","optionId":"37df681d-6b14-4fc4-bc71-505bb9d5a0d4"}]},{"type":"multiple-choice","text":"3. Selection criteria should be part of the application process and be provided in writing to all candidates on a consistent basis. TRI is committed to compliance with U.S. and other applicable export control laws.  Under U.S. export control laws, the release or disclosure of U.S.-origin controlled technology to foreign nationals is deemed to be an export or re-export to the foreign nationals’ home countries.  This “deemed export” rule does not apply to technology transfers between and among U.S. citizens, persons lawfully admitted for U.S. permanent residence, persons granted U.S. asylum or refugee status, or temporary residents under the 1986 legalization program. Your answers will be used by the company solely to ensure compliance with U.S. export control laws.","description":"","required":true,"id":"f188341d-f716-4897-a5cc-9bea9823d169","options":[{"text":"I have read and understand the selection criteria.","optionId":"bd599c03-f652-4c14-b168-0c75ffa3b9ef"}]}],"accountId":"b0c61671-acab-409c-8f89-4b8a9ae7cec2","id":"f5829fd8-8917-45d0-b0c5-f030db32cbcc"}'
+      name="cards[f5829fd8-8917-45d0-b0c5-f030db32cbcc][baseTemplate]"
+    />
+    <ul>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width multiple-choice">
+            <div class="text">
+              1. Are you a U.S. citizen, a lawful permanent resident of the
+              United States (“green card holder”), an asylee, a refugee, or
+              temporary resident under the 1986 legalization program?<span
+                class="required"
+                >✱</span
+              >
+            </div>
+          </div>
+          <div class="application-field full-width required-field">
+            <ul data-qa="multiple-choice">
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="cards[f5829fd8-8917-45d0-b0c5-f030db32cbcc][field0]"
+                    value="Yes"
+                    required="required"
+                  /><span class="application-answer-alternative"
+                    >Yes</span
+                  ></label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="cards[f5829fd8-8917-45d0-b0c5-f030db32cbcc][field0]"
+                    value="No"
+                    required="required"
+                  /><span class="application-answer-alternative"
+                    >No</span
+                  ></label
+                >
+              </li>
+            </ul>
+          </div></label
+        >
+      </li>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width multiple-choice">
+            <div class="text">
+              2. Are you a national, citizen, or permanent resident of Cuba,
+              Iran, North Korea, Sudan, Syria, or Crimea (region of
+              Ukraine)?<span class="required">✱</span>
+            </div>
+          </div>
+          <div class="application-field full-width required-field">
+            <ul data-qa="multiple-choice">
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="cards[f5829fd8-8917-45d0-b0c5-f030db32cbcc][field1]"
+                    value="Yes"
+                    required="required"
+                  /><span class="application-answer-alternative"
+                    >Yes</span
+                  ></label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="cards[f5829fd8-8917-45d0-b0c5-f030db32cbcc][field1]"
+                    value="No"
+                    required="required"
+                  /><span class="application-answer-alternative"
+                    >No</span
+                  ></label
+                >
+              </li>
+            </ul>
+          </div></label
+        >
+      </li>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width multiple-choice">
+            <div class="text">
+              3. Selection criteria should be part of the application process
+              and be provided in writing to all candidates on a consistent
+              basis. TRI is committed to compliance with U.S. and other
+              applicable export control laws. Under U.S. export control laws,
+              the release or disclosure of U.S.-origin controlled technology to
+              foreign nationals is deemed to be an export or re-export to the
+              foreign nationals’ home countries. This “deemed export” rule does
+              not apply to technology transfers between and among U.S. citizens,
+              persons lawfully admitted for U.S. permanent residence, persons
+              granted U.S. asylum or refugee status, or temporary residents
+              under the 1986 legalization program. Your answers will be used by
+              the company solely to ensure compliance with U.S. export control
+              laws.<span class="required">✱</span>
+            </div>
+          </div>
+          <div class="application-field full-width required-field">
+            <ul data-qa="multiple-choice">
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="cards[f5829fd8-8917-45d0-b0c5-f030db32cbcc][field2]"
+                    value="I have read and understand the selection criteria."
+                    required="required"
+                  /><span class="application-answer-alternative"
+                    >I have read and understand the selection criteria.</span
+                  ></label
+                >
+              </li>
+            </ul>
+          </div></label
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="section page-centered application-form">
+    <label for="additional-information"><h4>Additional information</h4></label>
+    <div class="application-additional">
+      <textarea
+        placeholder="Add a cover letter or anything else you want to share."
+        name="comments"
+        id="additional-information"
+      ></textarea>
+    </div>
+  </div>
+  <div
+    class="section eeo-section page-centered application-form"
+    id="eeoSurvey"
+    data-qa="eeo-section"
+  >
+    <hr />
+    <h4>
+      U.S. Equal Employment Opportunity information &nbsp;
+      <span class="eeo-light-text"
+        >(Completion is voluntary and will not subject you to adverse
+        treatment)</span
+      >
+    </h4>
+    <p>
+      Our company values diversity. To ensure that we comply with reporting
+      requirements and to learn more about how we can increase diversity in our
+      candidate pool, we invite you to voluntarily provide demographic
+      information in a confidential survey at the end of this application.
+      Providing this information is optional. It will not be accessible or used
+      in the hiring process, and has no effect on your opportunity for
+      employment.
+    </p>
+    <div class="application-question">
+      <label
+        ><div class="application-label">Gender</div>
+        <div class="application-field">
+          <div class="application-dropdown">
+            <select name="eeo[gender]">
+              <option value="">Select ...</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Decline to self-identify">
+                Decline to self-identify
+              </option>
+            </select>
+          </div>
+        </div></label
+      >
+    </div>
+    <div class="application-question">
+      <label
+        ><div class="application-label multiple-choice">
+          Race<a
+            class="eeo-more-info-button"
+            title="Click to see details about each option."
+            data-expand-selector="#eeoRaceExpandableSection"
+            aria-controls="eeoRaceExpandableSection"
+            href="javascript:void(0)"
+            aria-expanded="false"
+            ><svg
+              class="icon icon-info"
+              width="16px"
+              height="16px"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.34372 13.6571C-0.781242 10.5328 -0.781242 5.46508 2.34373 2.34174C5.46662 -0.780571 10.5323 -0.780571 13.6562 2.34168C16.7812 5.4651 16.7812 10.5348 13.6563 13.6571C10.5331 16.7808 5.46724 16.7811 2.34372 13.6571ZM3.03656 12.9639C5.77735 15.7051 10.2226 15.7048 12.9633 12.9637C15.7052 10.2242 15.7052 5.77554 12.9632 3.03502C10.2221 0.295293 5.77669 0.295293 3.03645 3.03502C0.294472 5.77556 0.294472 10.2223 3.03656 12.9639Z"
+              ></path>
+              <path d="M9 7H7V12H9V7Z"></path>
+              <path
+                d="M8 6C8.55228 6 9 5.55228 9 5C9 4.44772 8.55228 4 8 4C7.44772 4 7 4.44772 7 5C7 5.55228 7.44772 6 8 6Z"
+              ></path></svg
+          ></a>
+        </div>
+        <div class="application-field">
+          <div class="application-dropdown">
+            <select name="eeo[race]">
+              <option value="">Select ...</option>
+              <option value="Hispanic or Latino">Hispanic or Latino</option>
+              <option value="White (Not Hispanic or Latino)">
+                White (Not Hispanic or Latino)
+              </option>
+              <option
+                value="Black or African American (Not Hispanic or Latino)"
+              >
+                Black or African American (Not Hispanic or Latino)
+              </option>
+              <option
+                value="Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)"
+              >
+                Native Hawaiian or Other Pacific Islander (Not Hispanic or
+                Latino)
+              </option>
+              <option value="Asian (Not Hispanic or Latino)">
+                Asian (Not Hispanic or Latino)
+              </option>
+              <option
+                value="American Indian or Alaska Native (Not Hispanic or Latino)"
+              >
+                American Indian or Alaska Native (Not Hispanic or Latino)
+              </option>
+              <option value="Two or More Races (Not Hispanic or Latino)">
+                Two or More Races (Not Hispanic or Latino)
+              </option>
+              <option value="Decline to self-identify">
+                Decline to self-identify
+              </option>
+            </select>
+          </div>
+          <ul
+            id="eeoRaceExpandableSection"
+            class="eeo-expandable-description"
+            style="display: none"
+          >
+            <li>
+              <div>Hispanic or Latino</div>
+              <div class="eeo-option-description">
+                A person of Cuban, Mexican, Puerto Rican, South or Central
+                American, or other Spanish culture or origin regardless of race.
+              </div>
+            </li>
+            <li>
+              <div>White (Not Hispanic or Latino)</div>
+              <div class="eeo-option-description">
+                A person having origins in any of the original peoples of
+                Europe, the Middle East, or North Africa.
+              </div>
+            </li>
+            <li>
+              <div>Black or African American (Not Hispanic or Latino)</div>
+              <div class="eeo-option-description">
+                A person having origins in any of the black racial groups of
+                Africa.
+              </div>
+            </li>
+            <li>
+              <div>
+                Native Hawaiian or Other Pacific Islander (Not Hispanic or
+                Latino)
+              </div>
+              <div class="eeo-option-description">
+                A person having origins in any of the peoples of Hawaii, Guam,
+                Samoa, or other Pacific Islands.
+              </div>
+            </li>
+            <li>
+              <div>Asian (Not Hispanic or Latino)</div>
+              <div class="eeo-option-description">
+                A person having origins in any of the original peoples of the
+                Far East, Southeast Asia, or the Indian Subcontinent, including,
+                for example, Cambodia, China, India, Japan, Korea, Malaysia,
+                Pakistan, the Philippine Islands, Thailand, and Vietnam.
+              </div>
+            </li>
+            <li>
+              <div>
+                American Indian or Alaska Native (Not Hispanic or Latino)
+              </div>
+              <div class="eeo-option-description">
+                A person having origins in any of the original peoples of North
+                and South America (including Central America), and who maintain
+                tribal affiliation or community attachment.
+              </div>
+            </li>
+            <li>
+              <div>Two or More Races (Not Hispanic or Latino)</div>
+              <div class="eeo-option-description">
+                All persons who identify with more than one of the above five
+                races.
+              </div>
+            </li>
+          </ul>
+        </div></label
+      >
+    </div>
+  </div>
+  <div
+    class="section page-centered application-form"
+    id="countrySurvey
+
+_all-opportunity-locations"
+  >
+    <hr />
+    <h4 data-qa="card-name">
+      Requesting Voluntary Self Identification Information
+    </h4>
+    <p>
+      At TRI, we are developing technologies that will benefit all of humankind.
+      That’s why we are working every day to make our workforce as diverse as
+      possible: the more variety our team has in our experience, interest, and
+      backgrounds, the more likely we are to create truly great technologies. We
+      also believe that our society as a whole benefits when we reach out to
+      include a greater number of previously under-represented employees. To
+      help us deliver on these promises, we invite you to voluntarily provide
+      your gender identity, race/ethnicity, and sexual orientation. This
+      information will never be used in making any hiring or employment
+      decisions. We will use this data to track our progress towards achieving
+      the diversity we seek at TRI.
+    </p>
+    <input
+      type="hidden"
+      value='{"createdAt":1578068840547,"text":"Requesting Voluntary Self Identification Information","instructions":"At TRI, we are developing technologies that will benefit all of humankind. That’s why we are working every day to make our workforce as diverse as possible: the more variety our team has in our experience, interest, and backgrounds, the more likely we are to create truly great technologies. We also believe that our society as a whole benefits when we reach out to include a greater number of previously under-represented employees. To help us deliver on these promises, we invite you to voluntarily provide your gender identity, race/ethnicity, and sexual orientation. This information will never be used in making any hiring or employment decisions.  We will use this data to track our progress towards achieving the diversity we seek at TRI.","type":"survey","fields":[{"type":"multiple-choice","text":"Gender","description":"","required":false,"id":"26b5d21c-5c3d-412e-a018-264b78a44cba","options":[{"text":"Female","optionId":"680ac341-542e-4125-a597-6fe04cf0c1ef"},{"text":"Male"},{"text":"Non-Binary"},{"text":"I do not wish to answer"}]},{"type":"multiple-choice","text":"Race/Ethnicity","description":"","required":false,"id":"0b4f99cc-80b1-4c63-84e7-53b2f79bd551","options":[{"text":"American Indian or Alaska Native (Not Hispanic or Latino)","optionId":"0d9d9cee-feb9-44c5-92ca-5b05388cbfd5"},{"text":"Asian (Not Hispanic or Latino)"},{"text":"Black or African American (Not Hispanic or Latino)"},{"text":"Hispanic or Latino  "},{"text":"I do not wish to answer "},{"text":"Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)"},{"text":"Two or More Races  "},{"text":"White (Not Hispanic or Latino)"}]},{"type":"multiple-choice","text":"Do you consider yourself a member of the Lesbian, Gay, Bisexual and/or Transgender, Queer and Questioning (LGBTQ) community?","description":"","required":false,"id":"aa554212-bcdd-4ae9-a05b-126d7f17e9fe","options":[{"text":"Yes","optionId":"3b39691a-adc1-4d19-90d7-a7b62406b947"},{"text":"No"},{"text":"Prefer not to say"}]}],"accountId":"b0c61671-acab-409c-8f89-4b8a9ae7cec2","id":"a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236"}'
+      data-name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][baseTemplate]"
+      name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][baseTemplate]"
+    /><input
+      type="hidden"
+      value="3f7bc273-c7ac-44f5-81cd-1d9ed0d5084b"
+      data-name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][surveyId]"
+      name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][surveyId]"
+    /><input
+      type="hidden"
+      value=""
+      data-name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][candidateSelectedLocation]"
+      name=""
+    />
+    <ul>
+      <li class="application-question">
+        <div class="application-label full-width multiple-choice">
+          <div class="text">Gender</div>
+        </div>
+        <div class="application-field full-width">
+          <ul data-qa="multiple-choice">
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field0]"
+                  value="Female"
+                /><span class="application-answer-alternative"
+                  >Female</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field0]"
+                  value="Male"
+                /><span class="application-answer-alternative"
+                  >Male</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field0]"
+                  value="Non-Binary"
+                /><span class="application-answer-alternative"
+                  >Non-Binary</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field0]"
+                  value="I do not wish to answer"
+                /><span class="application-answer-alternative"
+                  >I do not wish to answer</span
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="application-question">
+        <div class="application-label full-width multiple-choice">
+          <div class="text">Race/Ethnicity</div>
+        </div>
+        <div class="application-field full-width">
+          <ul data-qa="multiple-choice">
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="American Indian or Alaska Native (Not Hispanic or Latino)"
+                /><span class="application-answer-alternative"
+                  >American Indian or Alaska Native (Not Hispanic or
+                  Latino)</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="Asian (Not Hispanic or Latino)"
+                /><span class="application-answer-alternative"
+                  >Asian (Not Hispanic or Latino)</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="Black or African American (Not Hispanic or Latino)"
+                /><span class="application-answer-alternative"
+                  >Black or African American (Not Hispanic or Latino)</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="Hispanic or Latino  "
+                /><span class="application-answer-alternative"
+                  >Hispanic or Latino
+                </span></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="I do not wish to answer "
+                /><span class="application-answer-alternative"
+                  >I do not wish to answer
+                </span></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)"
+                /><span class="application-answer-alternative"
+                  >Native Hawaiian or Other Pacific Islander (Not Hispanic or
+                  Latino)</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="Two or More Races  "
+                /><span class="application-answer-alternative"
+                  >Two or More Races
+                </span></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field1]"
+                  value="White (Not Hispanic or Latino)"
+                /><span class="application-answer-alternative"
+                  >White (Not Hispanic or Latino)</span
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="application-question">
+        <div class="application-label full-width multiple-choice">
+          <div class="text">
+            Do you consider yourself a member of the Lesbian, Gay, Bisexual
+            and/or Transgender, Queer and Questioning (LGBTQ) community?
+          </div>
+        </div>
+        <div class="application-field full-width">
+          <ul data-qa="multiple-choice">
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field2]"
+                  value="Yes"
+                /><span class="application-answer-alternative">Yes</span></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field2]"
+                  value="No"
+                /><span class="application-answer-alternative">No</span></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[a8d8c4a3-2936-4bc6-ac18-e2e3ed2de236][responses][field2]"
+                  value="Prefer not to say"
+                /><span class="application-answer-alternative"
+                  >Prefer not to say</span
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <input
+    type="hidden"
+    name="accountId"
+    value="b0c61671-acab-409c-8f89-4b8a9ae7cec2"
+  /><input type="hidden" name="linkedInData" /><input
+    type="hidden"
+    name="origin"
+  /><input type="hidden" name="referer" /><input
+    type="hidden"
+    name="socialReferralKey"
+  /><input type="hidden" name="resumeStorageId" value="" /><input
+    id="hcaptchaResponseInput"
+    type="hidden"
+    name="h-captcha-response"
+    value=""
+  /><button id="hcaptchaSubmitBtn" type="submit" class="hidden"></button
+  ><input type="hidden" name="source" />
+  <div
+    id="h-captcha"
+    class="h-captcha"
+    data-sitekey="e33f87f8-88ec-4e1a-9a13-df9bbb1d8120"
+  >
+    <iframe
+      sandbox="allow-scripts allow-same-origin"
+      title="Widget containing checkbox for hCaptcha security challenge"
+      frameborder="0"
+      scrolling="no"
+      src="https://newassets.hcaptcha.com/captcha/v1/096d3a6/static/hcaptcha-enclave.html#frame=enclave&amp;_channel=01aee3fbffio&amp;_origin=https%3A%2F%2Fjobs.lever.co&amp;host=jobs.lever.co&amp;se=096d3a6"
+      style="
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2147483647;
+        visibility: hidden;
+      "
+    ></iframe
+    ><iframe
+      sandbox="allow-scripts allow-same-origin"
+      title="Widget containing checkbox for hCaptcha security challenge"
+      frameborder="0"
+      scrolling="no"
+      src="https://newassets.hcaptcha.com/captcha/v1/096d3a6/static/hcaptcha-enclave.html#frame=enclave&amp;_channel=17z6mkqjck7k&amp;_origin=https%3A%2F%2Fjobs.lever.co&amp;host=jobs.lever.co&amp;se=096d3a6"
+      style="
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2147483647;
+        visibility: hidden;
+      "
+    ></iframe>
+  </div>
+  <div class="section page-centered application-form last-section-apply">
+    <button
+      id="btn-submit"
+      type="button"
+      class="postings-btn template-btn-submit ruby"
+      data-qa="btn-submit"
+      href="#"
+    >
+      Submit application
+    </button>
+  </div>
+</form>

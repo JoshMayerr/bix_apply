@@ -1,0 +1,474 @@
+<form id="application-form" enctype="multipart/form-data" method="POST">
+  <div class="section page-centered application-form">
+    <div><span></span></div>
+    <h4>Submit your application</h4>
+    <ul>
+      <li class="application-question resume">
+        <label
+          ><div class="application-label">
+            Resume/CV <span class="required">✱</span>
+          </div>
+          <div class="application-field">
+            <a
+              href="#"
+              class="postings-btn template-btn-utility visible-resume-upload"
+              ><svg
+                class="icon icon-paperclip"
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5 5V9C5 10.7 6.3 12 8 12C9.7 12 11 10.7 11 9V4.5C11 2 9 0 6.5 0C4 0 2 2 2 4.5V10C2 13.3 4.7 16 8 16C11.3 16 14 13.3 14 10V4H12V10C12 12.2 10.2 14 8 14C5.8 14 4 12.2 4 10V4.5C4 3.1 5.1 2 6.5 2C7.9 2 9 3.1 9 4.5V9C9 9.6 8.6 10 8 10C7.4 10 7 9.6 7 9V5H5Z"
+                ></path></svg
+              ><span class="filename"></span
+              ><span class="default-label">ATTACH RESUME/CV</span
+              ><input
+                class="application-file-input invisible-resume-upload"
+                data-qa="input-resume"
+                id="resume-upload-input"
+                name="resume"
+                tabindex="-1"
+                type="file" /></a
+            ><span class="resume-upload-failure"
+              ><div class="resume-upload-label">
+                Couldn't auto-read resume.
+              </div></span
+            ><span class="resume-upload-working"
+              ><div class="loading-indicator"></div>
+              <div class="resume-upload-label">Analyzing resume...</div></span
+            ><span class="resume-upload-success"
+              ><div class="loading-indicator completed">
+                <svg
+                  class="icon icon-check"
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6.2,14.4L0,8.2l2.5-2.5l3.5,3.5c0.1,0.1,0.2,0.1,0.2,0L13.5,2L16,4.5L6.2,14.4z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="resume-upload-label">Success!</div></span
+            >
+          </div></label
+        ><span class="resume-upload-oversize"
+          ><p class="error-message">
+            File exceeds the maximum upload size of <b>100MB</b>. Please try a
+            smaller size.
+          </p></span
+        >
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">
+            Full name<span class="required">✱</span>
+          </div>
+          <div class="application-field">
+            <input type="text" name="name" required="" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">
+            Email<span class="required">✱</span>
+          </div>
+          <div class="application-field">
+            <input
+              name="email"
+              type="email"
+              pattern="[a-zA-Z0-9.#$%&amp;'*+\/=?^_`{|}~][a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*"
+              required=""
+            /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Phone</div>
+          <div class="application-field"><input type="text" name="phone" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Current company</div>
+          <div class="application-field"><input type="text" name="org" /></div
+        ></label>
+      </li>
+    </ul>
+  </div>
+  <div class="section page-centered application-form">
+    <h4>Links</h4>
+    <ul>
+      <li class="application-question">
+        <label
+          ><div class="application-label">LinkedIn URL</div>
+          <div class="application-field">
+            <input type="text" name="urls[LinkedIn]" /></div
+        ></label>
+      </li>
+      <li class="application-question">
+        <label
+          ><div class="application-label">Other URL</div>
+          <div class="application-field">
+            <input type="text" name="urls[Other]" /></div
+        ></label>
+      </li>
+    </ul>
+  </div>
+  <div
+    class="section page-centered application-form"
+    data-qa="additional-cards"
+  >
+    <h4 data-qa="card-name">Additional questions</h4>
+    <input
+      type="hidden"
+      value='{"createdAt":1663016665857,"updatedAt":1663016665857,"text":"Additional questions","instructions":"","type":"posting","accountId":"d37c444b-4414-466c-8e72-e9a9b5e40932","fields":[{"type":"textarea","text":"Why are you interested in working at Schoolhouse?","description":"","required":true,"id":"1ba0376b-11b7-4569-850c-138b6c3efdc1"},{"type":"textarea","text":"Tell us about a project that you&apos;ve worked on and are proud of. What was challenging? What did you learn?","description":"","required":true,"id":"be173d83-9730-4b1a-a719-66c5a97e9088"},{"type":"text","text":"What is your Github username? This will be used during the interview process","description":"","required":true,"id":"88af4f02-4ae9-4933-93cb-b33ec2ecd6ed"},{"type":"textarea","text":"At Schoolhouse, we believe that reaching all learners requires a team that is diverse in every respect, and we are looking for individuals who will help us fulfill our mission by adding to the diversity of our team’s experiences, perspectives, and mindsets. With that in mind, tell us briefly how your experiences and perspectives—whether personal, professional, academic, or otherwise—could contribute to the diversity of our team.","description":"","required":false,"id":"cf243c23-3d00-4c3a-b44e-b9bd0b18cf04"},{"type":"text","text":"How did you hear about us?","description":"","required":false,"id":"608e270a-f0af-403b-b292-dc7392a468d8"}],"secret":false,"id":"0deae147-104f-48b8-aa41-6c84deccee66"}'
+      name="cards[0deae147-104f-48b8-aa41-6c84deccee66][baseTemplate]"
+    />
+    <ul>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width textarea">
+            <div class="text">
+              Why are you interested in working at Schoolhouse?<span
+                class="required"
+                >✱</span
+              >
+            </div>
+          </div>
+          <div class="application-field full-width required-field">
+            <textarea
+              class="card-field-input"
+              name="cards[0deae147-104f-48b8-aa41-6c84deccee66][field0]"
+              required="required"
+            ></textarea></div
+        ></label>
+      </li>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width textarea">
+            <div class="text">
+              Tell us about a project that you've worked on and are proud of.
+              What was challenging? What did you learn?<span class="required"
+                >✱</span
+              >
+            </div>
+          </div>
+          <div class="application-field full-width required-field">
+            <textarea
+              class="card-field-input"
+              name="cards[0deae147-104f-48b8-aa41-6c84deccee66][field1]"
+              required="required"
+            ></textarea></div
+        ></label>
+      </li>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width text">
+            <div class="text">
+              What is your Github username? This will be used during the
+              interview process<span class="required">✱</span>
+            </div>
+          </div>
+          <div class="application-field full-width required-field">
+            <input
+              required="required"
+              class="card-field-input"
+              type="text"
+              placeholder="Type your response"
+              value=""
+              name="cards[0deae147-104f-48b8-aa41-6c84deccee66][field2]"
+            /></div
+        ></label>
+      </li>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width textarea">
+            <div class="text">
+              At Schoolhouse, we believe that reaching all learners requires a
+              team that is diverse in every respect, and we are looking for
+              individuals who will help us fulfill our mission by adding to the
+              diversity of our team’s experiences, perspectives, and mindsets.
+              With that in mind, tell us briefly how your experiences and
+              perspectives—whether personal, professional, academic, or
+              otherwise—could contribute to the diversity of our team.
+            </div>
+          </div>
+          <div class="application-field full-width">
+            <textarea
+              class="card-field-input"
+              name="cards[0deae147-104f-48b8-aa41-6c84deccee66][field3]"
+            ></textarea></div
+        ></label>
+      </li>
+      <li class="application-question custom-question">
+        <label
+          ><div class="application-label full-width text">
+            <div class="text">How did you hear about us?</div>
+          </div>
+          <div class="application-field full-width">
+            <input
+              class="card-field-input"
+              type="text"
+              placeholder="Type your response"
+              value=""
+              name="cards[0deae147-104f-48b8-aa41-6c84deccee66][field4]"
+            /></div
+        ></label>
+      </li>
+    </ul>
+  </div>
+  <div class="section page-centered application-form">
+    <label for="additional-information"><h4>Additional information</h4></label>
+    <div class="application-additional">
+      <textarea
+        placeholder="Add a cover letter or anything else you want to share."
+        name="comments"
+        id="additional-information"
+      ></textarea>
+    </div>
+  </div>
+  <div
+    class="section page-centered application-form"
+    id="countrySurvey
+_all-opportunity-locations"
+  >
+    <hr />
+    <h4 data-qa="card-name">Demographic Survey for schoolhouse.world</h4>
+    <p>
+      We invite you to complete this optional survey to help us evaluate our
+      diversity and inclusion efforts. Submission of the information on this
+      form is strictly voluntary and refusal to provide it will not subject you
+      to any adverse treatment or affect your job application. Information
+      obtained will be kept separate from your name or job application. This
+      information will be kept secure and confidential and will be used solely
+      to evaluate our diversity and inclusion efforts.
+    </p>
+    <input
+      type="hidden"
+      value='{"createdAt":1646359758890,"updatedAt":1646359758890,"text":"Demographic Survey for schoolhouse.world","instructions":"We invite you to complete this optional survey to help us evaluate our diversity and inclusion efforts. Submission of the information on this form is strictly voluntary and refusal to provide it will not subject you to any adverse treatment or affect your job application. Information obtained will be kept separate from your name or job application. This information will be kept secure and confidential and will be used solely to evaluate our diversity and inclusion efforts.","type":"survey","fields":[{"type":"multiple-select","text":"I identify my ethnicity as","description":"Select all that apply","required":false,"id":"61f131c1-273b-4342-8bb6-52337e1a84bd","options":[{"text":"White / Caucasian"},{"text":"Hispanic, Latino, or Spanish origin"},{"text":"Black or African American"},{"text":"Asian"},{"text":"Native Hawaiian or other Pacific Islander"},{"text":"Indigenous Peoples, First Nations, Native American, or Alaska Native"},{"text":"Middle Eastern or North African"},{"text":"Some other race, ethnicity, or origin"}]},{"type":"multiple-choice","text":"What gender do you identify as?","description":"","required":false,"id":"2a7c35ae-8271-4c36-b10c-c94b53050f8f","options":[{"text":"Female"},{"text":"Male"},{"text":"Non-binary"}]}],"accountId":"d37c444b-4414-466c-8e72-e9a9b5e40932","id":"33bfe670-a9fd-4b21-bc63-713899471ada"}'
+      data-name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][baseTemplate]"
+      name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][baseTemplate]"
+    /><input
+      type="hidden"
+      value="895e6b27-6bd8-4cbc-9692-bde0ec11cd8a"
+      data-name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][surveyId]"
+      name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][surveyId]"
+    /><input
+      type="hidden"
+      value=""
+      data-name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][candidateSelectedLocation]"
+      name=""
+    />
+    <ul>
+      <li class="application-question">
+        <div class="application-label full-width multiple-select">
+          <div class="text">I identify my ethnicity as</div>
+          <p class="description">Select all that apply</p>
+        </div>
+        <div class="application-field full-width">
+          <ul data-qa="checkboxes">
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="White / Caucasian"
+                /><span class="application-answer-alternative"
+                  >White / Caucasian</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="Hispanic, Latino, or Spanish origin"
+                /><span class="application-answer-alternative"
+                  >Hispanic, Latino, or Spanish origin</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="Black or African American"
+                /><span class="application-answer-alternative"
+                  >Black or African American</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="Asian"
+                /><span class="application-answer-alternative"
+                  >Asian</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="Native Hawaiian or other Pacific Islander"
+                /><span class="application-answer-alternative"
+                  >Native Hawaiian or other Pacific Islander</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="Indigenous Peoples, First Nations, Native American, or Alaska Native"
+                /><span class="application-answer-alternative"
+                  >Indigenous Peoples, First Nations, Native American, or Alaska
+                  Native</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="Middle Eastern or North African"
+                /><span class="application-answer-alternative"
+                  >Middle Eastern or North African</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field0]"
+                  value="Some other race, ethnicity, or origin"
+                /><span class="application-answer-alternative"
+                  >Some other race, ethnicity, or origin</span
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="application-question">
+        <div class="application-label full-width multiple-choice">
+          <div class="text">What gender do you identify as?</div>
+        </div>
+        <div class="application-field full-width">
+          <ul data-qa="multiple-choice">
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field1]"
+                  value="Female"
+                /><span class="application-answer-alternative"
+                  >Female</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field1]"
+                  value="Male"
+                /><span class="application-answer-alternative"
+                  >Male</span
+                ></label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="surveysResponses[33bfe670-a9fd-4b21-bc63-713899471ada][responses][field1]"
+                  value="Non-binary"
+                /><span class="application-answer-alternative"
+                  >Non-binary</span
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <input
+    type="hidden"
+    name="accountId"
+    value="d37c444b-4414-466c-8e72-e9a9b5e40932"
+  /><input type="hidden" name="linkedInData" /><input
+    type="hidden"
+    name="origin"
+  /><input type="hidden" name="referer" /><input
+    type="hidden"
+    name="socialReferralKey"
+  /><input type="hidden" name="resumeStorageId" value="" /><input
+    id="hcaptchaResponseInput"
+    type="hidden"
+    name="h-captcha-response"
+    value=""
+  /><button id="hcaptchaSubmitBtn" type="submit" class="hidden"></button
+  ><input type="hidden" name="source" />
+  <div
+    id="h-captcha"
+    class="h-captcha"
+    data-sitekey="e33f87f8-88ec-4e1a-9a13-df9bbb1d8120"
+  >
+    <iframe
+      sandbox="allow-scripts allow-same-origin"
+      title="Widget containing checkbox for hCaptcha security challenge"
+      frameborder="0"
+      scrolling="no"
+      src="https://newassets.hcaptcha.com/captcha/v1/096d3a6/static/hcaptcha-enclave.html#frame=enclave&amp;_channel=0yxqb3z7lsn&amp;_origin=https%3A%2F%2Fjobs.lever.co&amp;host=jobs.lever.co&amp;se=096d3a6"
+      style="
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2147483647;
+        visibility: hidden;
+      "
+    ></iframe
+    ><iframe
+      sandbox="allow-scripts allow-same-origin"
+      title="Widget containing checkbox for hCaptcha security challenge"
+      frameborder="0"
+      scrolling="no"
+      src="https://newassets.hcaptcha.com/captcha/v1/096d3a6/static/hcaptcha-enclave.html#frame=enclave&amp;_channel=1awhjsw3rfsb&amp;_origin=https%3A%2F%2Fjobs.lever.co&amp;host=jobs.lever.co&amp;se=096d3a6"
+      style="
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2147483647;
+        visibility: hidden;
+      "
+    ></iframe>
+  </div>
+  <div class="section page-centered application-form last-section-apply">
+    <button
+      id="btn-submit"
+      type="button"
+      class="postings-btn template-btn-submit hex-color"
+      data-qa="btn-submit"
+      href="#"
+    >
+      Submit application
+    </button>
+  </div>
+</form>

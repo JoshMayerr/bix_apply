@@ -17,6 +17,24 @@ puppeteer.use(
   })
 );
 
+// Expected Input
+
+const application = {
+  easy: {
+    name: "Josh",
+    email: "jooshmayer@gmail.com",
+    phone: "4152055634",
+  },
+  links: {
+    linkedin_url: "https://linkedin.com/in/jooshmayer",
+    portfolio_url: "https://joshmayer.net",
+    twitter_url: "https://twitter.com/jooshmayer",
+    github_url: "https://github.com/joshmayerr",
+  },
+  hard: ["Yes", "No", "Written Response...."],
+  cover_letter: "cover letter....",
+};
+
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
